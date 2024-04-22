@@ -1,0 +1,13 @@
+.home__container{
+    margin-top: 5rem;
+}
+
+.search__container{
+    display: flex;
+    justify-content: center;
+}
+
+.repo__container{
+    display: flex;
+    flex-wrap: wrap;
+}

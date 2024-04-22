@@ -1,0 +1,15 @@
+.pagination__container{
+    display: flex;
+    justify-content: center; 
+    gap: 1rem;   
+}
+
+.pagination__content{
+    list-style-type: none;
+}
+
+.pagination__content a{
+    text-decoration: none;
+    border: 2px solid blue;
+    padding: 0.5rem 1rem;
+}
