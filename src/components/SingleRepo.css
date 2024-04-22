@@ -1,0 +1,23 @@
+.single__repo__container{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    margin-top: 4rem;
+}
+
+
+.single__repo__content{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 30rem;
+    height: 23rem;
+    color: #fff;
+    padding: 2rem;
+}
+
+.single__repo__content ul li{
+    list-style-type: none;
+    margin-top: 1.5rem;
+}

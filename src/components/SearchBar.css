@@ -1,0 +1,21 @@
+.search__content{
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.search{
+    display: flex;
+    justify-content: center;
+    width: 25rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    background-color: #fff;
+    border-radius: 3px;
+    border: none;
+}
+
+.search__btn{
+    padding: 0 0.6rem 0 0.6rem;
+    letter-spacing: 0.01rem;
+}

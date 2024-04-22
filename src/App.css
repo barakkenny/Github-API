@@ -1,8 +1,15 @@
 *{
   margin: 0;
   padding: 0;
+  background-color: rgb(16, 39, 39);
 }
 
 .container{
   width: 100vw;
+}
+
+.header__text{
+  text-align: center;
+  color: #fff;
+  margin: 1rem;
 }

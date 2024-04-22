@@ -1,7 +1,9 @@
 .pagination__container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; 
     gap: 1rem;   
+    margin-top: 4rem;
 }
 
 .pagination__content{
@@ -10,6 +12,8 @@
 
 .pagination__content a{
     text-decoration: none;
-    border: 2px solid blue;
+    border: 2px solid #fff;
+    border-radius: 3px;
     padding: 0.5rem 1rem;
+    color: #fff;
 }

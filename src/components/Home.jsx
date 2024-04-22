@@ -9,9 +9,9 @@ import ErrorBoundary from './ErrorBoundary';
 function Home() {
 const [userData, setUserData] = useState([]);
 const [error, setError] = useState(null);
-const [filteredRepositories, setFilteredRepositories] = useState(userData);
 const [currentPage, setCurrentPage] = useState(1)
 const [postPerPage] = useState(10)
+const [searchRepo, setSearchRepo] = useState("")
 
 useEffect(()=> {
 async function fetchData(){
@@ -23,7 +23,6 @@ async function fetchData(){
       const data = await response.json();
       console.log(data)
       setUserData(data)
-      setFilteredRepositories(data);
      } catch(error){
       console.log(error)
       setError('Error fetching data. Please try again.');
@@ -41,15 +40,15 @@ const paginate = (pageNumber)=> setCurrentPage(pageNumber)
   return (
     <section className='home__container'>
       <section className='search__container'>
-       <SearchBar filteredRepositories={filteredRepositories} setFilteredRepositories={setFilteredRepositories}  userData={currentPost} setUserData={setUserData}/>
+       <SearchBar  setSearchRepo={setSearchRepo}/>
       </section>
-      <main>
+      <main className='repo__container'>
       {error ? (<div>{<ErrorBoundary error={error}/>}</div>) : 
-       currentPost.map((user) => (
-        <section key={user.id} className='repo__container'>
-          <Link to={`/single-repo/${user.id}`}>{user.name}</Link>
-
-              
+       currentPost.filter((item)=> searchRepo.toLowerCase() === ""
+       ? item
+       : item.name.toLowerCase().includes(searchRepo)).map((user) => (
+        <section className='repo__content' key={user.id}>
+          <Link className='repo__con' to={`/single-repo/${user.id}`}>{user.name}</Link>    
           </section>
        ))
       }

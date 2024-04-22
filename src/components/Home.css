@@ -8,6 +8,21 @@
 }
 
 .repo__container{
-    display: flex;
-    flex-wrap: wrap;
+    margin: 3rem;
+}
+
+.repo__content{
+    display: inline-flex;
+    margin: 3rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    /* height: 5rem; */
+}
+
+.repo__con{
+    justify-content: center;
+    text-decoration: none;
+    max-width: 10rem;
+    color: #fff;
 }
