@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ErrorBoundary({ error }) {
+function ErrorBoundary() {
   return (
     <div>
-      <h1 style={{textAlign: 'center'}}>{error}</h1>
+      <h1 style={{ textAlign: 'center', color: '#fff',marginTop: 70, fontSize: 40}}>Error Page</h1>
     </div>
   )
 }

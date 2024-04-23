@@ -17,3 +17,9 @@
     padding: 0.5rem 1rem;
     color: #fff;
 }
+
+.pagination__content a:hover{
+    background-color: #fff;
+    color: midnightblue;
+    font-weight: bold;
+}

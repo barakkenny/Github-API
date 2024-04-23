@@ -4,7 +4,6 @@ import { GITHUB_API} from '../utils/data'
 import "./Home.css"
 import SearchBar from './SearchBar';
 import Pagination from './Pagination';
-import ErrorBoundary from './ErrorBoundary';
 
 function Home() {
 const [userData, setUserData] = useState([]);
@@ -21,7 +20,6 @@ async function fetchData(){
         throw new Error('Network response was not ok')
       }
       const data = await response.json();
-      console.log(data)
       setUserData(data)
      } catch(error){
       console.log(error)
@@ -43,7 +41,7 @@ const paginate = (pageNumber)=> setCurrentPage(pageNumber)
        <SearchBar  setSearchRepo={setSearchRepo}/>
       </section>
       <main className='repo__container'>
-      {error ? (<div>{<ErrorBoundary error={error}/>}</div>) : 
+      {error ? (<Link to="/error-boundary" style={{textAlign: 'center', fontSize: 20,color: "white"}}>{error}</Link>) : 
        currentPost.filter((item)=> searchRepo.toLowerCase() === ""
        ? item
        : item.name.toLowerCase().includes(searchRepo)).map((user) => (

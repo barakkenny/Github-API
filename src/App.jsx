@@ -4,6 +4,7 @@ import { Routes, Route} from 'react-router-dom'
 import SingleRepo from './components/SingleRepo';
 import './App.css'
 import NotFound from './components/NotFound';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/single-repo/:id' element={<SingleRepo/>}/>
-    
+      <Route path='/error-boundary' element={<ErrorBoundary />}/>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     </section>
